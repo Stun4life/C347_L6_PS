@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         facts1 = res.getStringArray(R.array.facts);
         facts2 = res.getStringArray(R.array.facts2);
 
+        factsArray = new ArrayList<>();
         factsArray.add(facts1);
         factsArray.add(facts2);
 
@@ -96,7 +97,8 @@ public class MainActivity extends AppCompatActivity {
                     return true;
 
                 }
-            case R.id.action_Random:
-
+            //case R.id.action_Random:
+            default:
+                return true;
         }
-    }
+        }}
