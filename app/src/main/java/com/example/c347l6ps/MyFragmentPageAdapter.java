@@ -11,6 +11,7 @@ public class MyFragmentPageAdapter extends FragmentPagerAdapter {
 
     ArrayList<Fragment> fragments;
 
+
     public MyFragmentPageAdapter(FragmentManager fm, ArrayList<Fragment> al) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         fragments = al;
@@ -18,11 +19,11 @@ public class MyFragmentPageAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return null;
+        return fragments.get(position);
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return fragments.size();
     }
 }

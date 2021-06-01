@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 /**
@@ -24,7 +25,7 @@ public class Screen2 extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     Button btnChangeColour2;
-    ListView l2;
+    LinearLayout l2;
 
     // TODO: Rename and change types of parameters
     private String mParam1;

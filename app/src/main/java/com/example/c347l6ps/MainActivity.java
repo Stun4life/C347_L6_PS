@@ -24,41 +24,31 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Fragment> al;
     MyFragmentPageAdapter adapter;
     ViewPager viewPager;
-    ListView firstListView, secondListView;
 
-    LinearLayout l1, l2;
-
-    String[] facts1;
-    String[] facts2;
-    ArrayAdapter aa;
-
-    ArrayList<String[]> factsArray;
-
-    ArrayList<String> factArrayList = new ArrayList<String>(){
-    };
+//    String[] facts1;
+//    String[] facts2;
+//
+//    ArrayAdapter aa;
+//    ArrayList<String[]> factsArray;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        viewPager = findViewById(R.id.viewPager);
-        firstListView = findViewById(R.id.listview1);
-        secondListView = findViewById(R.id.listview2);
-        l1 = findViewById(R.id.firstLinear);
-        l2 = findViewById(R.id.secondLinear);
 
+        viewPager = findViewById(R.id.viewPager);
         FragmentManager fm = getSupportFragmentManager();
         Resources res = getResources();
 
-        facts1 = res.getStringArray(R.array.facts);
-        facts2 = res.getStringArray(R.array.facts2);
+//        facts1 = res.getStringArray(R.array.facts);
+//        facts2 = res.getStringArray(R.array.facts2);
+//
+//        factsArray = new ArrayList<>();
+//        factsArray.add(facts1);
+//        factsArray.add(facts2);
 
-        factsArray = new ArrayList<>();
-        factsArray.add(facts1);
-        factsArray.add(facts2);
-
-        al = new ArrayList<Fragment>();
+        al = new ArrayList<>();
         al.add(new Screen1());
         al.add(new Screen2());
 
