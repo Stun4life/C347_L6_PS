@@ -2,6 +2,8 @@ package com.example.c347l6ps.Fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -16,6 +18,8 @@ import com.crazyhitty.chdev.ks.rssmanager.RSS;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 import com.example.c347l6ps.FeedArrayAdapter;
 import com.example.c347l6ps.R;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -39,7 +43,6 @@ public class CnnRssFragment extends Fragment implements RssReader.RssCallback{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        rssReader.loadFeeds(RSS_CNN_URL);
     }
 
     @Override
@@ -63,6 +66,12 @@ public class CnnRssFragment extends Fragment implements RssReader.RssCallback{
         arrayAdapter = new FeedArrayAdapter(getContext(), R.layout.list_feed_item, feedArray);
         listView.setAdapter(arrayAdapter);
         arrayAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        rssReader.loadFeeds(RSS_CNN_URL);
     }
 
     @Override

@@ -18,6 +18,7 @@ import android.widget.ListView;
 import com.example.c347l6ps.R;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Fact1Fragment extends Fragment {
 
@@ -46,7 +47,25 @@ public class Fact1Fragment extends Fragment {
         btnChangeColour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                firstListView.setBackgroundColor(Color.CYAN);
+                int random = new Random().nextInt(6);
+                if (random == 1) {
+                    firstListView.setBackgroundColor(Color.CYAN);
+                }
+                else if (random == 2) {
+                    firstListView.setBackgroundColor(Color.RED);
+                }
+                else if (random == 3) {
+                    firstListView.setBackgroundColor(Color.YELLOW);
+                }
+                else if (random == 4) {
+                    firstListView.setBackgroundColor(Color.GREEN);
+                }
+                else if (random == 5) {
+                    firstListView.setBackgroundColor(Color.GRAY);
+                }
+                else {
+                    firstListView.setBackgroundColor(Color.BLUE);
+                }
             }
         });
         return view;
@@ -57,9 +76,11 @@ public class Fact1Fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //add items
-        factArrayList.add("Pound for pound, your bones are stronger than steel. A block of bone the size of a matchbox can support up to 18,000 pounds of weight");
-        factArrayList.add("Anime is huge is Japan");
-        factArrayList.add("About 60% of your body is made up of water");
+        if (factArrayList.isEmpty()) {
+            factArrayList.add("Pound for pound, your bones are stronger than steel. A block of bone the size of a matchbox can support up to 18,000 pounds of weight");
+            factArrayList.add("Anime is huge is Japan");
+            factArrayList.add("About 60% of your body is made up of water");
+        }
 
         arrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, factArrayList);
 

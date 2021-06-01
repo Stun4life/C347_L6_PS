@@ -19,6 +19,7 @@ import android.widget.ListView;
 import com.example.c347l6ps.R;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -84,7 +85,25 @@ public class Fact2Fragment extends Fragment {
         btnChangeColour2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                secondListView2.setBackgroundColor(Color.CYAN);
+                int random = new Random().nextInt(6);
+                if (random == 1) {
+                    secondListView2.setBackgroundColor(Color.CYAN);
+                }
+                else if (random == 2) {
+                    secondListView2.setBackgroundColor(Color.RED);
+                }
+                else if (random == 3) {
+                    secondListView2.setBackgroundColor(Color.YELLOW);
+                }
+                else if (random == 4) {
+                    secondListView2.setBackgroundColor(Color.GREEN);
+                }
+                else if (random == 5) {
+                    secondListView2.setBackgroundColor(Color.GRAY);
+                }
+                else {
+                    secondListView2.setBackgroundColor(Color.BLUE);
+                }
             }
         });
         return view;
