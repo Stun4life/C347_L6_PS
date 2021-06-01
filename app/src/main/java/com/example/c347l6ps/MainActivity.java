@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             case R.id.action_Random:
-                int random = new Random().nextInt(3);
+                int random = new Random().nextInt(al.size());
                 Log.i("numbers", String.valueOf(random));
                 viewPager.setCurrentItem(random, true);
 
