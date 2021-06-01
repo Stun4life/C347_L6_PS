@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         al = new ArrayList<>();
         al.add(new Screen1());
         al.add(new Screen2());
+        al.add(new CnnRssFragment());
 
         adapter = new MyFragmentPageAdapter(fm, al);
         viewPager.setAdapter(adapter);
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             case R.id.action_Random:
-                int random = new Random().nextInt(3);
+                int random = new Random().nextInt(2);
                 Log.i("numbers", String.valueOf(random));
                 if (random == 1) {
                     int max2 = viewPager.getChildCount();
