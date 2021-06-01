@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -80,6 +81,24 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             case R.id.action_Random:
+                int random = new Random().nextInt(3);
+                Log.i("numbers", String.valueOf(random));
+                if (random == 1) {
+                    int max2 = viewPager.getChildCount();
+                    if (viewPager.getCurrentItem() < max2 -1) {
+                        int nextPage = viewPager.getCurrentItem() + 1;
+                        viewPager.setCurrentItem(nextPage, true);
+                        return true;
+
+                    }
+                }
+                else if (random == 2){
+                    if (viewPager.getCurrentItem() > 0) {
+                        int previousPage = viewPager.getCurrentItem() - 1;
+                        viewPager.setCurrentItem(previousPage, true);
+                        return true;
+                    }
+                }
             default:
                 return super.onOptionsItemSelected(item);
         }
