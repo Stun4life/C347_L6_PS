@@ -1,4 +1,4 @@
-package com.example.c347l6ps;
+package com.example.c347l6ps.Fragments;
 
 import android.os.Bundle;
 
@@ -14,6 +14,8 @@ import android.widget.ListView;
 import com.crazyhitty.chdev.ks.rssmanager.Channel;
 import com.crazyhitty.chdev.ks.rssmanager.RSS;
 import com.crazyhitty.chdev.ks.rssmanager.RssReader;
+import com.example.c347l6ps.FeedArrayAdapter;
+import com.example.c347l6ps.R;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.c347l6ps;
+package com.example.c347l6ps.Fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,9 +15,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.c347l6ps.R;
+
 import java.util.ArrayList;
 
-public class Screen1 extends Fragment {
+public class Fact1Fragment extends Fragment {
 
     Button btnChangeColour;
 
@@ -25,7 +27,7 @@ public class Screen1 extends Fragment {
     ListView firstListView;
     ArrayAdapter arrayAdapter;
 
-    public Screen1() {
+    public Fact1Fragment() {
         // Required empty public constructor
     }
 

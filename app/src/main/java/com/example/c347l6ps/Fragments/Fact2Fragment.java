@@ -1,4 +1,4 @@
-package com.example.c347l6ps;
+package com.example.c347l6ps.Fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,14 +16,16 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.example.c347l6ps.R;
+
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Screen2#newInstance} factory method to
+ * Use the {@link Fact2Fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Screen2 extends Fragment {
+public class Fact2Fragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -41,7 +43,7 @@ public class Screen2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Screen2() {
+    public Fact2Fragment() {
         // Required empty public constructor
     }
 
@@ -51,11 +53,11 @@ public class Screen2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Screen2.
+     * @return A new instance of fragment Fact2Fragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static Screen2 newInstance(String param1, String param2) {
-        Screen2 fragment = new Screen2();
+    public static Fact2Fragment newInstance(String param1, String param2) {
+        Fact2Fragment fragment = new Fact2Fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

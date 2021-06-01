@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/purple_200"
     android:id="@+id/firstLinear"
-    tools:context=".Screen1">
+    tools:context=".Fragments.Fact1Fragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ListView

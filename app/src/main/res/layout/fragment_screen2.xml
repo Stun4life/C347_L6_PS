@@ -6,7 +6,7 @@
     android:background="@color/grey"
     android:orientation="vertical"
     android:id="@+id/secondLinear"
-    tools:context=".Screen2">
+    tools:context=".Fragments.Fact2Fragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ListView

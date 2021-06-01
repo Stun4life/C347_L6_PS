@@ -6,16 +6,14 @@ import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ListView;
+
+import com.example.c347l6ps.Fragments.CnnRssFragment;
+import com.example.c347l6ps.Fragments.Fact1Fragment;
+import com.example.c347l6ps.Fragments.Fact2Fragment;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -50,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
 //        factsArray.add(facts2);
 
         al = new ArrayList<>();
-        al.add(new Screen1());
-        al.add(new Screen2());
+        al.add(new Fact1Fragment());
+        al.add(new Fact2Fragment());
         al.add(new CnnRssFragment());
 
         adapter = new MyFragmentPageAdapter(fm, al);
