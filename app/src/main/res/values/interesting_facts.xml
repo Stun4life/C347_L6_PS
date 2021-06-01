@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="facts">
+        <item>Anime is huge is Japan</item>
+        <item>Pound for pound, your bones are stronger than steel.
+            A block of bone the size of a matchbox can support up to 18,000 pounds of weight</item>
+        <item>About 60% of your body is made up of water</item>
+    </string-array>
+
+</resources>
