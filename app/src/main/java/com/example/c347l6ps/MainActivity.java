@@ -8,9 +8,11 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -23,13 +25,18 @@ public class MainActivity extends AppCompatActivity {
     MyFragmentPageAdapter adapter;
     ViewPager viewPager;
     ListView firstListView, secondListView;
-    Button btnChangeColour, btnChangeColour2;
+
     LinearLayout l1, l2;
 
     String[] facts1;
     String[] facts2;
+    ArrayAdapter aa;
 
     ArrayList<String[]> factsArray;
+
+    ArrayList<String> factArrayList = new ArrayList<String>(){
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
         firstListView = findViewById(R.id.listview1);
         secondListView = findViewById(R.id.listview2);
-        btnChangeColour = findViewById(R.id.btnChangeColour);
-        btnChangeColour2 = findViewById(R.id.btnChangeColour2);
         l1 = findViewById(R.id.firstLinear);
         l2 = findViewById(R.id.secondLinear);
 
@@ -59,19 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new MyFragmentPageAdapter(fm, al);
         viewPager.setAdapter(adapter);
-
-        btnChangeColour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                l1.setBackgroundColor(Color.CYAN);
-            }
-        });
-        btnChangeColour2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                l2.setBackgroundColor(Color.BLUE);
-            }
-        });
 
     }
 
@@ -99,6 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             //case R.id.action_Random:
             default:
-                return true;
+                return super.onOptionsItemSelected(item);
         }
         }}

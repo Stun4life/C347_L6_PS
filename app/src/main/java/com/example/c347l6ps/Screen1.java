@@ -1,12 +1,19 @@
 package com.example.c347l6ps;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,6 +27,12 @@ public class Screen1 extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    Button btnChangeColour;
+
+    ArrayList<String> factArrayList = new ArrayList<String>(){
+    };
+    ListView l1;
+    ListView firstListView;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -59,6 +72,23 @@ public class Screen1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_screen1, container, false);
+        View view = inflater.inflate(R.layout.fragment_screen1, container, false);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.activity_main, factArrayList);
+        firstListView = view.findViewById(R.id.listview1);
+        factArrayList.add("Pound for pound, your bones are stronger than steel.\n" +
+                "            A block of bone the size of a matchbox can support up to 18,000 pounds of weight");
+        factArrayList.add("Test123");
+        factArrayList.add("Test123456");
+        Log.i("info", String.valueOf(factArrayList));
+        firstListView.setAdapter(arrayAdapter);
+        btnChangeColour = view.findViewById(R.id.btnChangeColour);
+        l1 = view.findViewById(R.id.listview1);
+        btnChangeColour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                l1.setBackgroundColor(Color.CYAN);
+            }
+        });
+        return view;
     }
 }
