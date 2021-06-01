@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             case R.id.action_Random:
-
             default:
                 return super.onOptionsItemSelected(item);
         }
