@@ -79,7 +79,7 @@ public class Fact2Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_screen2, container, false);
+        View view = inflater.inflate(R.layout.fragment_fact_2, container, false);
         btnChangeColour2 = view.findViewById(R.id.btnChangeColour2);
         secondListView2 = view.findViewById(R.id.listview2);
         btnChangeColour2.setOnClickListener(new View.OnClickListener() {

@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.bumptech.glide.Glide;
@@ -46,7 +45,7 @@ public class Fact1Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_screen1, container, false);
+        View view = inflater.inflate(R.layout.fragment_fact_1, container, false);
         firstListView = view.findViewById(R.id.listview1);
         btnChangeColour = view.findViewById(R.id.btnChangeColour);
         ivTrivia = view.findViewById(R.id.ivTrivia);

@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.c347l6ps.Fragments.CnnRssFragment;
+import com.example.c347l6ps.Fragments.RssFragment;
 import com.example.c347l6ps.Fragments.Fact1Fragment;
 import com.example.c347l6ps.Fragments.Fact2Fragment;
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         al = new ArrayList<>();
         al.add(new Fact1Fragment());
         al.add(new Fact2Fragment());
-        al.add(new CnnRssFragment());
+        al.add(new RssFragment());
 
         loadSharedPrefs();
 
