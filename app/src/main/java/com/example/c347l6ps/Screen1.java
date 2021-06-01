@@ -55,10 +55,9 @@ public class Screen1 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //add items
-        factArrayList.add("Pound for pound, your bones are stronger than steel.\n" +
-                "            A block of bone the size of a matchbox can support up to 18,000 pounds of weight");
-        factArrayList.add("Test123");
-        factArrayList.add("Test123456");
+        factArrayList.add("Pound for pound, your bones are stronger than steel. A block of bone the size of a matchbox can support up to 18,000 pounds of weight");
+        factArrayList.add("Anime is huge is Japan");
+        factArrayList.add("About 60% of your body is made up of water");
 
         arrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, factArrayList);
 

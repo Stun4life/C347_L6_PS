@@ -79,7 +79,8 @@ public class MainActivity extends AppCompatActivity {
                     return true;
 
                 }
-            //case R.id.action_Random:
+            case R.id.action_Random:
+
             default:
                 return super.onOptionsItemSelected(item);
         }

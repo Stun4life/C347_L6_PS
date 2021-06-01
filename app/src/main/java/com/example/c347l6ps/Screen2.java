@@ -3,14 +3,20 @@ package com.example.c347l6ps;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,8 +31,12 @@ public class Screen2 extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     Button btnChangeColour2;
-    LinearLayout l2;
 
+    ArrayList<String> factArrayList = new ArrayList<String>();
+    ListView secondListView2;
+    ArrayAdapter arrayAdapter;
+
+    LinearLayout l2;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -68,14 +78,30 @@ public class Screen2 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_screen2, container, false);
         btnChangeColour2 = view.findViewById(R.id.btnChangeColour2);
-        l2 = view.findViewById(R.id.secondLinear);
+        secondListView2 = view.findViewById(R.id.listview2);
         btnChangeColour2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                l2.setBackgroundColor(Color.CYAN);
+                secondListView2.setBackgroundColor(Color.CYAN);
             }
         });
         return view;
+
+    }
+    @Override
+    public void onViewCreated(@NonNull @org.jetbrains.annotations.NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //add items
+        factArrayList.add("Despite accounting for 2% of our body mass, the brain uses 20% of our oxygen and blood supply");
+        factArrayList.add("Teeth are considered part of the skeletal system, but are not counted as bones");
+        factArrayList.add("The largest bone in the human body is the femur, also known as the thigh bone. The smallest bone is the stirrup bone, which is located inside your ear drum");
+
+        arrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, factArrayList);
+
+        secondListView2.setAdapter(arrayAdapter);
+
+        Log.i("info", String.valueOf(factArrayList));
 
     }
 }
